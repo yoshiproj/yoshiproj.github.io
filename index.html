@@ -3,52 +3,85 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
-.container {
-  display: grid;
-  grid-template-areas:
-    "header header header"
-    "menu content content"
-    "menu footer footer";
-  grid-template-columns: 1fr 3fr;
-  gap: 5px;
-  background-color: #2196F3;
-  padding: 5px;
+  {
+  box-sizing:border-box;
 }
-.container > div {
-  background-color: rgba(255, 255, 255, 0.8);
-  padding: 10px;
-  border-radius: 10px;
-}
-.container > div.header {
-  grid-area: header;
-  text-align: center;
-  font: 20px Arial;
-}
-.container > div.menu {
-  grid-area: menu;
-  font-size: 18px;
-  padding: 25px 5px;
+
+.menu {
+  float: left;
+  width: 25%;
   text-align: center;
 }
-.container > div.content {
-  grid-area: content;
+
+.menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 7px;
+}
+
+.menu li {
+  background-color: #a6a6a6;
+  color: #ffffff;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: #fff;
+  display:block;
+  padding: 8px;
+  margin-top: 10px;
+  margin-bottom: 8px;
+}
+
+.menu a:hover {
+  background-color: #0099cc;
+}
+
+.content {
+  float: left;
+  width: 70%;
   text-align: justify;
+  margin: 0px;
+  padding-top: 20px;
 }
-.container > div.footer {
-  grid-area: footer;
-  text-align: right;
+
+.footer {
+ text-align: right;
+ float: left;
+ width: 100%;
+}
+
+@media only screen and (max-width: 620px) {
+  /* For mobile phones: */
+  .menu, .content, .footer {
+    width: 100%;
+  }
 }
 </style>
 </head>
-<body> 
-<div class="container">
-  <div class="header"><h2>Let's Explore Yoshida Town!</h2></div>
-  <div class="menu"><a href="forestadventure.html"> forest adventure</a><br><br>
-<a href="tataraba.html"> roadside station: tataraba ichibanchi</a><br><br>
-<a href="tatarasannai.html"> sugaya tatara san'nai</a><br><br>
-<a href="ironhistory.html"> history of iron museum</a></div>
-  <div class="content"><h3>What is it?</h3><p>"Let's Explore Yoshida Town" is a project by 3rd year students at Yoshida Junior High School in Unnan City, Shimane Prefecture, Japan, to share the charms of their hometown with the world. Enjoy these audio descriptions of local hotspots filled with rich nature and a long-lasting history.</p></div>
-  <div class="footer"><h4>Footer</h4></div>
-</body> 
-</html>
+<body style="font-family:Arial;color:#aaaaaa;">
 
+<div style="background-color:#e5e5e5;padding:15px;text-align:center;">
+  <h1>Let's Explore Yoshida Town!</h1>
+</div>
+
+  <div class="menu">
+    <ul>
+      <li><a href="forestadventure.html">Forest Adventure</a></li>
+      <li><a href="tataraba.html">Tataraba Ichibanchi</a></li>
+      <li><a href="tatarasannai.html">Sugaya Tatara San'nai</a></li>
+      <li><a href="ironhistory.html">History of Iron Museum</a></li>
+    </ul>
+  </div>
+    
+  
+  <div class="content">
+  	<h2>About Us</h2>
+    <p>"Let's Explore Yoshida Town" is a project by 3rd year students at Yoshida Junior High School in Unnan City, Shimane Prefecture, Japan, to share the charms of their hometown with the world. Enjoy these audio descriptions of local hotspots filled with rich nature and a long-lasting history.</p></div>
+  
+  
+  <div class="footer">
+  	<h4>Yoshida Junior High School</h4></div>
+
+</body>
+</html>
